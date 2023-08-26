@@ -66,7 +66,7 @@ body {
 }
 
 /* HEADER */
-header{
+;header{
   padding-top: 20px;
   padding-bottom: 20px;
   
@@ -75,26 +75,129 @@ header{
   border-bottom: 1px solid #e2e2e2;
 }
 
-header > div{
-  display: flex;
+header {
+  display: flex; /* 헤더를 Flex 컨테이너로 만듭니다. */
 }
 
-header .head_text{
+header .head_text {
   width: 50%;
   font-size: 25px;
-  justify-content: center;
+  /* 이제 .head_text 내부의 내용을 수평으로 가운데 정렬할 것입니다. */
+  text-align: center;
 }
 
-header .head_btn_left{
+header .head_btn_left {
   width: 25%;
-  justify-content: start;
+  justify-content: start; /* 좌측 정렬 */
 }
 
-header .head_btn_right{
+header .head_btn_right {
   width: 25%;
-  justify-content: end;
+  display: flex; /* 내부 텍스트를 정렬하기 위해 Flex 컨테이너로 만듭니다. */
+  justify-content: flex-end; /* 내부 텍스트를 우측 정렬합니다. */
 }
+
 
 header button{
   font-family: "Nanum Pen Script";
+}
+
+/* DiaryList */
+
+.DiaryList .menu_wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryList .menu_wrapper .right_col{
+  flex-grow: 1;
+}
+
+.DiaryList .menu_wrapper .right_col button{
+  width: 100%;
+}
+
+.DiaryList .ControlMenu{
+  margin-right: 10px;
+  border : none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 18px;
+}
+
+
+/* DiaryItem */
+
+.DiaryItem{
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e2e2e2;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryItem .emotion_img_wrapper{
+  cursor: pointer;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.DiaryItem .emotion_img_wrapper_1{
+  background-color: #64c964;
+}
+
+.DiaryItem .emotion_img_wrapper_2{
+  background-color: #9dd772;
+}
+
+.DiaryItem .emotion_img_wrapper_3{
+  background-color: #fdce17;
+}
+
+.DiaryItem .emotion_img_wrapper_4{
+  background-color: #fd8446;
+}
+
+.DiaryItem .emotion_img_wrapper_5{
+  background-color: #fd565f;
+}
+
+.DiaryItem .emotion_img_wrapper img{
+  width: 50%;
+}
+
+.DiaryItem .info_wrapper{
+  flex-grow: 1px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.DiaryItem .diary_date{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.DiaryItem .diary_content_preview{
+  font-size: 18px;
+}
+
+.DiaryItem .btn_wrapper{
+  min-width: 70px;
 }
